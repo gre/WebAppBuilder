@@ -8,7 +8,7 @@ shift
 SCRIPTS=$*
 
 HERE=`dirname $0`
-JS_ENGINE=`which node nodejs`
+JS_ENGINE=`which node nodejs 2> /dev/null`
 
 DEBUG=${DEBUG:-false}
 COMPILER="${JS_ENGINE} $HERE/uglify.js --unsafe"

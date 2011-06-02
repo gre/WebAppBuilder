@@ -8,7 +8,7 @@ shift
 VIEWS=$*
 
 HERE=`dirname $0`
-JS_ENGINE=`which node nodejs`
+JS_ENGINE=`which node nodejs 2> /dev/null`
 TEMPLATER="$JS_ENGINE $HERE/templater.js"
 
 for view in ${VIEWS}; do
