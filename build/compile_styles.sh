@@ -14,7 +14,7 @@ SASS_COMPASS_AVAILABLE=false
 echo "" | $SASS -s &> /dev/null && SASS_AVAILABLE=true
 echo "" | $SASS -s --compass &> /dev/null && SASS_COMPASS_AVAILABLE=true
 if [ $SASS_AVAILABLE = true ] ; then
-  SASS=$SASS"  -q -C -s";
+  SASS=$SASS"  -q -C -s -I"$SRC_DIR;
   if [ $SASS_COMPASS_AVAILABLE = true ] ; then
     SASS=$SASS" --compass";
   fi;
