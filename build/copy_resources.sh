@@ -16,7 +16,7 @@ for f in ${RESOURCES}; do
     to=$1;
     from=$1;
   fi
-	cp $SRC_DIR/$from $DIST_DIR/$to;
+	cp -r $SRC_DIR/$from $DIST_DIR/$to;
   if [ $? = 0 ] ; then
     echo "RESOURCES: $DIST_DIR/$to <= $from";
   else
